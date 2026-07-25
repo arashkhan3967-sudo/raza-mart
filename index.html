@@ -1,398 +1,1061 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAZA MART</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial;
-    background:#f5f5f5;
+background:#f5f5f5;
 }
 
 header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#0a8f3d;
+color:white;
+text-align:center;
+padding:18px;
+}
+
+header h1{
+font-size:32px;
+}
+
+header p{
+margin-top:5px;
+}
+
+nav{
+background:#06752f;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+}
+
+.banner img{
+width:100%;
+display:block;
+}
+
+.search-box{
+background:white;
+padding:15px;
+text-align:center;
+}
+
+#searchInput{
+width:90%;
+max-width:450px;
+padding:12px;
+font-size:17px;
+border:2px solid green;
+border-radius:30px;
+outline:none;
 }
 
 .offer{
-    background:red;
-    color:white;
-    padding:12px;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
+background:red;
+color:white;
+text-align:center;
+padding:12px;
+font-size:22px;
+font-weight:bold;
 }
 
-.content{
-    text-align:center;
-    padding:20px;
+.welcome{
+padding:20px;
+text-align:center;
 }
 
-button{
-    background:green;
-    color:white;
-    padding:12px 25px;
-    border:none;
-    border-radius:8px;
-    font-size:18px;
+.welcome h2{
+color:green;
+margin-bottom:10px;
 }
-</style>
 
-</head>
- 
-<body>
-
-<script>
-let cart = 0;
-
-function addToCart(product){
-    cart++;
-    alert(product + " Cart me add ho gaya!\n\nTotal Items: " + cart);
+.call-btn{
+display:inline-block;
+margin:8px;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
 }
-</script>
 
+.owner1{
+background:#0a8f3d;
+}
 
-<header>
-<h1>🛒 RAZA MART</h1>
-<p>Quality Grocery at Best Price</p>
-<nav style="background:#006400;padding:10px;text-align:center;">
-<a href="#" style="color:white;text-decoration:none;margin:15px;">Home</a>
-<a href="#" style="color:white;text-decoration:none;margin:15px;">Products</a>
-<a href="#" style="color:white;text-decoration:none;margin:15px;">Offers</a>
-<a href="#" style="color:white;text-decoration:none;margin:15px;">Contact</a>
-</nav>
-</header>
-<img src="file_00000000938482088ed96dd13a16bd07.png" width="100%" alt="RAZA MART Banner">
-<div style="text-align:center;padding:15px;background:#fff;">
-  <input type="text" placeholder="🔍 Search Products..."
-         style="width:80%;max-width:400px;padding:12px;border:2px solid green;border-radius:25px;font-size:16px;">
-</div>
+.owner2{
+background:#0066ff;
+}
 
-<div class="offer">
-🔥 Today's Special Offer - Up to 50% OFF 🔥
-</div>
-
-<div class="content">
-<h2>Welcome to RAZA MART</h2>
-
-<p>Fresh Grocery • Daily Essentials • Best Prices</p>
-
-<p>🕒 Open: 8:00 AM - 11:00 PM</p>
-
-<button><div style="text-align:center; margin:20px 0;">
-
-<a href="tel:+917488108079"
-style="background:#0b8f2d;color:#fff;padding:14px 22px;text-decoration:none;border-radius:30px;display:inline-block;margin:8px;font-size:18px;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-📞 Call Owner 1
-</a>
-
-<a href="tel:+917277435149"
-style="background:#0066ff;color:#fff;padding:14px 22px;text-decoration:none;border-radius:30px;display:inline-block;margin:8px;font-size:18px;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-📞 Call Owner 2
-</a>
-
-</div>
-</button>
-
-</div>
-
-</body><h1>🛒 RAZA MART</h1>
-<p><b>Quality Grocery at Best Price</b></p>
-
-<hr>
-
-<h2>🔥 Today's Special Offer 🔥</h2>
-<h3>Up to 50% OFF</h3>
-
-<button><a href="https://wa.me/917488108079?text=Hello%20RAZA%20MART,%20I%20want%20to%20order."
-style="background:linear-gradient(45deg,#28a745,#0d6efd);
+.shop-btn{
+display:inline-block;
+margin-top:20px;
+background:#25D366;
 color:white;
 padding:14px 28px;
 text-decoration:none;
 border-radius:30px;
 font-size:18px;
 font-weight:bold;
+}
+
+.section-title{
+text-align:center;
+margin:30px 0 15px;
+color:#0a8f3d;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.cat{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 12px rgba(0,0,0,.15);
+font-size:18px;
+font-weight:bold;
+}
+
+.products{
+padding:15px;
+}
+
+.product{
+background:white;
+border-radius:15px;
+padding:15px;
+margin-bottom:20px;
+box-shadow:0 5px 12px rgba(0,0,0,.15);
+text-align:center;
+display:block;
+}
+
+.product img{
+width:170px;
+height:170px;
+object-fit:contain;
+}
+
+.product h3{
+margin:10px 0;
+color:#0a8f3d;
+}
+
+.price{
+font-size:22px;
+color:#ff5722;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.buy-btn{
 display:inline-block;
-box-shadow:0 5px 12px rgba(0,0,0,0.3);
-transition:0.3s;">
+background:#25D366;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header id="home">
+<h1>🛒 RAZA MART</h1>
+<p>Quality Grocery at Best Price</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#offers">Offers</a>
+<a href="#contact">Contact</a>
+</nav>
+
+
+<div class="banner">
+<img src="banner.jpg" alt="RAZA MART Banner">
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search Products..."
+onkeyup="searchProducts()">
+</div>
+
+<div class="offer" id="offers">
+🔥 Today's Special Offer - Up To 50% OFF 🔥
+</div>
+
+<div class="welcome">
+
+<h2>Welcome To RAZA MART</h2>
+
+<p>Fresh Grocery • Daily Essentials • Best Prices</p>
+
+<br>
+
+<p>🕒 Open : 8:00 AM - 11:00 PM</p>
+
+<br>
+
+<a class="call-btn owner1"
+href="tel:+917488108079">
+📞 Call Owner 1
+</a>
+
+<a class="call-btn owner2"
+href="tel:+917277435149">
+📞 Call Owner 2
+</a>
+
+<br>
+
+<a class="shop-btn"
+href="https://wa.me/917488108079?text=Hello%20RAZA%20MART">
 🛒 Shop Now
-</a> </button></button>
-
-<hr>
-
-<h2>🛍️ Our Categories</h2>
-
-<p>🥬 Fresh Vegetables</p>
-<p>🍎 Fresh Fruits</p>
-<p>🥛 Dairy Products</p>
-<p>🍪 Snacks</p>
-<p>🥤 Beverages</p>
-
-<hr>
-
-<h2><section style="background:#ffffff;padding:25px;border-radius:20px;margin:20px;box-shadow:0 8px 20px rgba(0,0,0,.15);text-align:center;">
-
-<h2 style="color:#0a8f3d;">📞 Contact Us</h2>
-
-<a href="https://wa.me/917488108079"
-style="display:block;background:linear-gradient(45deg,#25D366,#128C7E);color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
-💬 WhatsApp 1
 </a>
 
-<a href="https://wa.me/917277435149"
-style="display:block;background:linear-gradient(45deg,#25D366,#128C7E);color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
-💬 WhatsApp 2
-</a>
+</div>
 
-<a href="https://wa.me/917488108079?text=Hello%20RAZA%20MART%2C%20I%20need%20help."
-style="display:block;background:linear-gradient(45deg,#ff9800,#ff5722);color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
-🛒 Order / Support
-</a>
+<h2 class="section-title">🛍 Our Categories</h2>
 
-<a href="tel:+917488108079"
-style="display:block;background:#0a8f3d;color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
-📞 Call 7488108079
-</a>
+<div class="categories">
 
-<a href="tel:+917277435149"
-style="display:block;background:#0066ff;color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
-📞 Call 7277435149
-</a>
+<div class="cat">🥬 Vegetables</div>
 
-<p style="font-size:18px;">📍 Aurangabad, Bihar</p>
-<p style="font-size:18px;">🕒 Open: 8:00 AM – 11:00 PM</p>
+<div class="cat">🍎 Fruits</div>
 
-</section> </h2>
+<div class="cat">🥛 Dairy</div>
+    
+<div class="cat">🍪 Snacks</div>
 
-<a href="https://wa.me/917488108079">
-    <button>💬 WhatsApp 1</button>
-</a>
+<div class="cat">🧂 Grocery</div>
 
-<br><br>
+<div class="cat">🧴 Household</div>
 
-<a href="https://wa.me/917277435149">
-    <button>💬 WhatsApp 2</button>
-</a>
-    <button>💬 Order - Support</button>
-</a>
-<p>📍 Aurangabad, Bihar</p>
-<p>🕒 Open: 8:00 AM - 11:00 PM</p>
-<button onclick="shop()">🛒 Shop Now</button>
+</div>
 
-<hr>
+<h2 class="section-title" id="products">🛍 Our Products</h2>
 
-<h2>⭐ Customer Reviews</h2>
+<div class="products">
+    <div class="product">
+<img src="images/aashirvaad-atta.jpg" alt="Aashirvaad Atta">
+<h3>🌾 Aashirvaad Atta</h3>
+<p class="price">₹440 / 10kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Aashirvaad%20Atta">🛒 Buy Now</a>
+</div>
 
+<div class="product">
+<img src="images/fortune-oil.jpg" alt="Fortune Oil">
+<h3>🛢️ Fortune Oil 1L</h3>
+<p class="price">₹170</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Fortune%20Oil%201L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/tata-salt.jpg" alt="Tata Salt">
+<h3>🧂 Tata Salt</h3>
+<p class="price">₹30</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Tata%20Salt">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/sugar.jpg" alt="Sugar">
+<h3>🍬 Sugar</h3>
+<p class="price">₹50 / kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Sugar">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/maggi.jpg" alt="Maggi">
+<h3>🍜 Maggi</h3>
+<p class="price">₹15</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Maggi">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/parle-g.jpg" alt="Parle G">
+<h3>🍪 Parle-G</h3>
+<p class="price">₹10</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Parle-G">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/amul-milk.jpg" alt="Amul Milk">
+<h3>🥛 Amul Milk</h3>
+<p class="price">₹60</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Amul%20Milk">🛒 Buy Now</a>
+</div>
+<div class="product">
+    <img src="images/coca-cola.jpg" alt="Coca Cola">
+    <h3>🥤 Coca Cola 2L</h3>
+    <p class="price">₹95</p>
+    <a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Coca%20Cola%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/vim-soap.jpg" alt="Vim Soap">
+<h3>🧽 Vim Soap</h3>
+<p class="price">₹4</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Vim%20Soap">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/wheel-surf.jpg" alt="Wheel Surf">
+<h3>🧺 Wheel Surf</h3>
+<p class="price">₹78</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Wheel%20Surf">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/surf-excel-7kg.jpg" alt="Surf Excel 7kg">
+<h3>🧺 Surf Excel 7kg</h3>
+<p class="price">₹700</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Surf%20Excel%207kg">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/surf-excel-1kg.jpg" alt="Surf Excel 1kg">
+<h3>🧺 Surf Excel 1kg</h3>
+<p class="price">₹130</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Surf%20Excel%201kg">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/kaju.jpg" alt="Kaju">
+<h3>🥜 Kaju 250gm</h3>
+<p class="price">₹260</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Kaju%20250gm">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/cow-ghee.jpg" alt="Cow Ghee">
+<h3>🧈 Cow Ghee 500ml</h3>
+<p class="price">₹700</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Cow%20Ghee">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/oreo.jpg" alt="Oreo">
+<h3>🍫 Oreo Family Pack (Buy 1 Get 1 Free)</h3>
+<p class="price">₹144</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Oreo%20Family%20Pack">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/harpic.jpg" alt="Harpic">
+<h3>🧴 Harpic 1L</h3>
+<p class="price">₹200</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Harpic%201L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/pepsi.jpg" alt="Pepsi">
+<h3>🥤 Pepsi 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Pepsi%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/bread.jpg" alt="Bread">
+<h3>🍞 Bread</h3>
+<p class="price">₹45</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Bread">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/clinic-plus-pouch.jpg" alt="Clinic Plus">
+<h3>🧴 Clinic Plus Pouch (16 pcs)</h3>
+<p class="price">₹14</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Clinic%20Plus%20Pouch">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/tomato-ketchup.jpg" alt="Tomato Ketchup">
+<h3>🍅 Tomato Ketchup 1kg</h3>
+<p class="price">₹100</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Tomato%20Ketchup">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/chana.jpg" alt="Chana">
+<h3>🌾 Chana 1kg</h3>
+<p class="price">₹70</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Chana%201kg">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/horlicks-1kg.jpg" alt="Horlicks">
+<h3>🥛 Horlicks 1kg</h3>
+<p class="price">₹370</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Horlicks%201kg">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/lux-soap.jpg" alt="Lux Soap">
+<h3>🧼 Lux Soap</h3>
+<p class="price">₹40</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Lux%20Soap">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/colgate.jpg" alt="Colgate">
+<h3>🪥 Colgate Toothpaste</h3>
+<p class="price">₹65</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Colgate%20Toothpaste">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/dove-shampoo.jpg" alt="Dove Shampoo">
+<h3>🧴 Dove Shampoo</h3>
+<p class="price">₹199</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Dove%20Shampoo">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/dairy-milk.jpg" alt="Dairy Milk">
+<h3>🍫 Dairy Milk</h3>
+<p class="price">₹50</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Dairy%20Milk">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/amul-cheese.jpg" alt="Amul Cheese">
+<h3>🧀 Amul Cheese 200g</h3>
+<p class="price">₹135</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Amul%20Cheese">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/yippee.jpg" alt="Yippee">
+<h3>🍜 Yippee Noodles</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Yippee%20Noodles">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/kissan-ketchup.jpg" alt="Kissan Tomato Ketchup">
+<h3>🥫 Kissan Tomato Ketchup 500g</h3>
+<p class="price">₹120</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Kissan%20Tomato%20Ketchup">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/dettol-soap.jpg" alt="Dettol Soap">
+<h3>🧼 Dettol Soap</h3>
+<p class="price">₹40</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Dettol%20Soap">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/goodday.jpg" alt="Good Day">
+<h3>🥫 Britannia Good Day Biscuit</h3>
+<p class="price">₹35</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Britannia%20Good%20Day">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/kitkat.jpg" alt="KitKat">
+<h3>🍫 KitKat</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20KitKat">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/sprite.jpg" alt="Sprite">
+<h3>🥤 Sprite 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Sprite%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/fanta.jpg" alt="Fanta">
+<h3>🥤 Fanta 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Fanta%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/clinic-plus.jpg" alt="Clinic Plus">
+<h3>🧴 Clinic Plus Shampoo</h3>
+<p class="price">₹120</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Clinic%20Plus%20Shampoo">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/lifebuoy.jpg" alt="Lifebuoy">
+<h3>🧼 Lifebuoy Soap</h3>
+<p class="price">₹38</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Lifebuoy%20Soap">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/colgate200.jpg" alt="Colgate 200g">
+<h3>🪥 Colgate Toothpaste 200g</h3>
+<p class="price">₹125</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Colgate%20Toothpaste%20200g">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/ariel.jpg" alt="Ariel">
+<h3>🪣 Ariel Detergent 1kg</h3>
+<p class="price">₹260</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Ariel%201kg">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/hide-seek.jpg" alt="Hide & Seek">
+<h3>🍪 Hide & Seek Biscuit</h3>
+<p class="price">₹40</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Hide%20and%20Seek">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/munch.jpg" alt="Munch">
+<h3>🍫 Munch</h3>
+<p class="price">₹10</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Munch">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/5star.jpg" alt="5 Star">
+<h3>🍫 5 Star</h3>
+<p class="price">₹10</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%205%20Star">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/perk.jpg" alt="Perk">
+<h3>🍫 Perk</h3>
+<p class="price">₹10</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Perk">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/thumsup.jpg" alt="Thums Up">
+<h3>🥤 Thums Up 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Thums%20Up%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/limca.jpg" alt="Limca">
+<h3>🥤 Limca 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Limca%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/sunsilk.jpg" alt="Sunsilk">
+<h3>🧴 Sunsilk Shampoo</h3>
+<p class="price">₹145</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Sunsilk%20Shampoo">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/dove-soap.jpg" alt="Dove Soap">
+<h3>🧼 Dove Soap</h3>
+<p class="price">₹45</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Dove%20Soap">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/rin.jpg" alt="Rin Bar">
+<h3>🧽 Rin Detergent Bar</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Rin%20Bar">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/kissan-jam.jpg" alt="Kissan Jam">
+<h3>🥫 Kissan Mixed Fruit Jam</h3>
+<p class="price">₹180</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Kissan%20Jam">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/peanut-butter.jpg" alt="Peanut Butter">
+<h3>🥜 Peanut Butter 500g</h3>
+<p class="price">₹240</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Peanut%20Butter">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/black-pepper.jpg" alt="Black Pepper">
+<h3>🧂 Black Pepper 100g</h3>
+<p class="price">₹90</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Black%20Pepper">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/red-chilli.jpg" alt="Red Chilli Powder">
+<h3>🌶️ Red Chilli Powder 500g</h3>
+<p class="price">₹160</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Red%20Chilli%20Powder">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/turmeric.jpg" alt="Turmeric Powder">
+<h3>🟡 Turmeric Powder 500g</h3>
+<p class="price">₹150</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Turmeric%20Powder">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/tata-tea-gold.jpg" alt="Tata Tea Gold">
+<h3>🍵 Tata Tea Gold 500g</h3>
+<p class="price">₹320</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Tata%20Tea%20Gold">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/bru-coffee.jpg" alt="Bru Coffee">
+<h3>☕ Bru Coffee 100g</h3>
+<p class="price">₹180</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Bru%20Coffee">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/dabur-honey.jpg" alt="Dabur Honey">
+<h3>🍯 Dabur Honey 500g</h3>
+<p class="price">₹280</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Dabur%20Honey">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/cornflakes.jpg" alt="Corn Flakes">
+<h3>🥣 Kellogg's Corn Flakes</h3>
+<p class="price">₹210</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Corn%20Flakes">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/bournvita.jpg" alt="Bournvita">
+<h3>🥛 Bournvita 500g</h3>
+<p class="price">₹310</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Bournvita">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/horlicks-500g.jpg" alt="Horlicks">
+<h3>🥛 Horlicks 500g</h3>
+<p class="price">₹340</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Horlicks">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/haldiram-bhujia.jpg" alt="Haldiram Bhujia">
+<h3>🥜 Haldiram Bhujia</h3>
+<p class="price">₹65</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Haldiram%20Bhujia">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/act2-popcorn.jpg" alt="Act II Popcorn">
+<h3>🍿 Act II Popcorn</h3>
+<p class="price">₹35</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Act%20II%20Popcorn">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/real-juice.jpg" alt="Real Juice">
+<h3>🥤 Real Mixed Fruit Juice 1L</h3>
+<p class="price">₹140</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Real%20Mixed%20Fruit%20Juice">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/maaza.jpg" alt="Maaza">
+<h3>🥤 Maaza 1.2L</h3>
+<p class="price">₹80</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Maaza">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/nivea-lotion.jpg" alt="Nivea Body Lotion">
+<h3>🧴 Nivea Body Lotion 200ml</h3>
+<p class="price">₹240</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Nivea%20Body%20Lotion">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/gillette-foam.jpg" alt="Gillette Shaving Foam">
+<h3>🪒 Gillette Shaving Foam</h3>
+<p class="price">₹199</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Gillette%20Shaving%20Foam">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/monaco.jpg" alt="Monaco Biscuit">
+<h3>🍪 Monaco Biscuit</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Monaco%20Biscuit">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/bourbon.jpg" alt="Bourbon Biscuit">
+<h3>🍪 Bourbon Biscuit</h3>
+<p class="price">₹35</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Bourbon%20Biscuit">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/jimjam.jpg" alt="Jim Jam Biscuit">
+<h3>🍪 Jim Jam Biscuit</h3>
+<p class="price">₹35</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Jim%20Jam%20Biscuit">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/sting.jpg" alt="Sting Energy Drink">
+<h3>🥤 Sting Energy Drink</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Sting">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/redbull.jpg" alt="Red Bull">
+<h3>🥤 Red Bull 250ml</h3>
+<p class="price">₹125</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Red%20Bull">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/appyfizz.jpg" alt="Appy Fizz">
+<h3>🥤 Appy Fizz</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Appy%20Fizz">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/lays.jpg" alt="Lay's Chips">
+<h3>🍟 Lay's Classic Chips</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Lays">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/kurkure.jpg" alt="Kurkure">
+<h3>🌽 Kurkure Masala Munch</h3>
+<p class="price">₹20</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Kurkure">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/topramen.jpg" alt="Top Ramen">
+<h3>🍜 Top Ramen Noodles</h3>
+<p class="price">₹18</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Top%20Ramen">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/everest-garam.jpg" alt="Everest Garam Masala">
+<h3>🧂 Everest Garam Masala 100g</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Everest%20Garam%20Masala">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/mdh-kitchen-king.jpg" alt="MDH Kitchen King">
+<h3>🌶️ MDH Kitchen King Masala</h3>
+<p class="price">₹85</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20MDH%20Kitchen%20King">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/tata-sampann-chana-dal.jpg" alt="Tata Sampann Chana Dal">
+<h3>🌾 Tata Sampann Chana Dal 1kg</h3>
+<p class="price">₹105</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Tata%20Sampann%20Chana%20Dal">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/india-gate-rice.jpg" alt="India Gate Rice">
+<h3>🍚 India Gate Basmati Rice 5kg</h3>
+<p class="price">₹650</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20India%20Gate%20Rice">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/marie-gold.jpg" alt="Marie Gold">
+<h3>🍪 Britannia Marie Gold</h3>
+<p class="price">₹35</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Marie%20Gold">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/krackjack.jpg" alt="Krackjack">
+<h3>🍪 Krackjack Biscuit</h3>
+<p class="price">₹35</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Krackjack">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/cadbury-silk.jpg" alt="Cadbury Silk">
+<h3>🍫 Cadbury Dairy Milk Silk</h3>
+<p class="price">₹190</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Cadbury%20Silk">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/frooti.jpg" alt="Frooti">
+<h3>🥤 Frooti 1L</h3>
+<p class="price">₹70</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Frooti">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/slice.jpg" alt="Slice">
+<h3>🥤 Slice 1.2L</h3>
+<p class="price">₹80</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Slice">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/mother-dairy-milk.jpg" alt="Mother Dairy Milk">
+<h3>🥛 Mother Dairy Milk 1L</h3>
+<p class="price">₹68</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Mother%20Dairy%20Milk">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/paneer.jpg" alt="Paneer">
+<h3>🧀 Fresh Paneer 200g</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Fresh%20Paneer">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/cheese-slices.jpg" alt="Cheese Slices">
+<h3>🧀 Cheese Slices Pack</h3>
+<p class="price">₹145</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Cheese%20Slices">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/odonil.jpg" alt="Odonil">
+<h3>🌸 Odonil Room Freshener</h3>
+<p class="price">₹85</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Odonil">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/head-shoulders.jpg" alt="Head & Shoulders">
+<h3>🧴 Head & Shoulders Shampoo</h3>
+<p class="price">₹210</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Head%20and%20Shoulders">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/vaseline.jpg" alt="Vaseline">
+<h3>🧴 Vaseline Body Lotion</h3>
+<p class="price">₹240</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Vaseline%20Body%20Lotion">🛒 Buy Now</a>
+</div>
+<div class="product">
+<img src="images/7up.jpg" alt="7UP">
+<h3>🥤 7UP 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%207UP%202L">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/mountain-dew.jpg" alt="Mountain Dew">
+<h3>🥤 Mountain Dew 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Mountain%20Dew">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/mirinda.jpg" alt="Mirinda">
+<h3>🥤 Mirinda 2L</h3>
+<p class="price">₹95</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Mirinda">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/ferrero-rocher.jpg" alt="Ferrero Rocher">
+<h3>🍫 Ferrero Rocher 16 Pieces</h3>
+<p class="price">₹499</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Ferrero%20Rocher">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/pulse.jpg" alt="Pulse Candy">
+<h3>🍬 Pulse Candy</h3>
+<p class="price">₹1 / Piece</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Pulse%20Candy">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/alpenliebe.jpg" alt="Alpenliebe">
+<h3>🍬 Alpenliebe Candy</h3>
+<p class="price">₹1 / Piece</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Alpenliebe">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/melody.jpg" alt="Melody">
+<h3>🍬 Melody Chocolate</h3>
+<p class="price">₹2 / Piece</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Melody">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/colin.jpg" alt="Colin Glass Cleaner">
+<h3>🧴 Colin Glass Cleaner 500ml</h3>
+<p class="price">₹110</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Colin%20Glass%20Cleaner">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/pril.jpg" alt="Pril Dishwash">
+<h3>🍽️ Pril Dishwash Liquid 500ml</h3>
+<p class="price">₹120</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Pril%20Dishwash">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/ghadi.jpg" alt="Ghadi Detergent">
+<h3>🧺 Ghadi Detergent 1kg</h3>
+<p class="price">₹75</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Ghadi%20Detergent">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/comfort.jpg" alt="Comfort Fabric Conditioner">
+<h3>🧴 Comfort Fabric Conditioner 860ml</h3>
+<p class="price">₹220</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Comfort%20Fabric%20Conditioner">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/harpic-powerplus.jpg" alt="Harpic Power Plus">
+<h3>🚽 Harpic Power Plus 1L</h3>
+<p class="price">₹199</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Harpic%20Power%20Plus">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<img src="images/basmati-rice.jpg"
+
+<h2 class="section-title">⭐ Customer Reviews</h2>
+
+<div style="padding:20px;text-align:center;">
 <p>★★★★★ Excellent Service</p>
 <p>★★★★★ Best Grocery Store</p>
+<p>★★★★★ Fast Home Delivery</p>
+</div>
 
-<hr>
-<hr>
+<h2 class="section-title">📍 Our Location</h2>
 
-<h2 style="text-align:center;">📍 Our Location</h2>
-
+<div style="padding:15px;">
 <iframe
 src="https://www.google.com/maps?q=Raza+Mart+Nawadih+Aurangabad+Bihar&output=embed"
 width="100%"
 height="300"
 style="border:0;border-radius:15px;"
-allowfullscreen=""
 loading="lazy">
 </iframe>
-
-<p>© 2026 RAZA MART. All Rights Reserved.</p>
-
-<hr>
-
-<h2>🛍️ Our Products</h2>
-<style>
-.product{
-  background:#fff;
-  border-radius:18px;
-  padding:18px;
-  margin:18px 0;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-  text-align:center;
-  transition:.3s;
-}
-
-.product:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.2);
-}
-
-.product h3{
-  color:#0a8f3d;
-  font-size:24px;
-  margin-bottom:10px;
-}
-
-.product p{
-  color:#ff5722;
-  font-size:22px;
-  font-weight:bold;
-  margin-bottom:15px;
-}
-
-.buy-btn{
-  display:inline-block;
-  background:linear-gradient(45deg,#25D366,#128C7E);
-  color:#fff;
-  text-decoration:none;
-  padding:12px 28px;
-  border-radius:30px;
-  font-size:18px;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.buy-btn:hover{
-  background:linear-gradient(45deg,#128C7E,#25D366);
-}
-</style>
-
-<div class="product">
-<h3>🌾 Aashirvaad Atta</h3>
-<p>₹440 / 10kg</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Aashirvaad%20Atta">🛒 Buy Now</a>
 </div>
 
-<div class="product">
-<h3>🛢️ Fortune Oil 1L</h3>
-<p>₹170</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Fortune%20Oil%201L">🛒 Buy Now</a>
+<h2 class="section-title">📞 Contact Us</h2>
+
+<div style="padding:20px;text-align:center;">
+
+<a class="buy-btn"
+href="https://wa.me/917488108079">
+💬 WhatsApp 1
+</a>
+
+<br><br>
+
+<a class="buy-btn"
+href="https://wa.me/917277435149">
+💬 WhatsApp 2
+</a>
+
+<br><br>
+
+<a class="call-btn owner1"
+href="tel:+917488108079">
+📞 Call 7488108079
+</a>
+
+<br><br>
+
+<a class="call-btn owner2"
+href="tel:+917277435149">
+📞 Call 7277435149
+</a>
+
 </div>
 
-<div class="product">
-<h3>🧂 Tata Salt</h3>
-<p>₹30</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Tata%20Salt">🛒 Buy Now</a>
-</div>
+<footer style="background:#0a8f3d;color:white;text-align:center;padding:20px;margin-top:30px;">
+© 2026 RAZA MART <br>
+Aurangabad, Bihar
+</footer>
 
-<div class="product">
-<h3>🍬 Sugar</h3>
-<p>₹50 / kg</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Sugar">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🍜 Maggi</h3>
-<p>₹15</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Maggi">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🍪 Parle-G</h3>
-<p>₹10</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Parle-G">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🥛 Amul Milk</h3>
-<p>₹60</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Amul%20Milk">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🥤 Coca-Cola</h3>
-<p>₹70</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Coca-Cola">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🍚 Chini</h3>
-<p>₹50 / kg</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Chini">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🌼 Arhar Dal</h3>
-<p>₹135 / kg</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Arhar%20Dal">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🌼 Masoor Dal</h3>
-<p>₹89 / kg</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Masoor%20Dal">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🧽 Vim Soap</h3>
-<p>₹4</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Vim%20Soap">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🧺 Wheel Surf</h3>
-<p>₹78</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Wheel%20Surf">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🧺 Surf Excel 7kg</h3>
-<p>₹700</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Surf%20Excel%207kg">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🧺 Surf Excel 1kg</h3>
-<p>₹130</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Surf%20Excel%201kg">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🥜 Kaju 250gm</h3>
-<p>₹260</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Kaju%20250gm">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🧈 Cow Ghee 500mL</h3>
-<p>₹700</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Cow%20Ghee%20500mL">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🍫 Oreo Family Pack (Buy 1 Get 1 Free)</h3>
-<p>₹144</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Oreo%20Family%20Pack">🛒 Buy Now</a>
-</div>
-
-<div class="product">
-<h3>🧴 Harpic 1L</h3>
-<p>₹200</p>
-<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Harpic%201L">🛒 Buy Now</a>
-</div>
-  <button>Buy Now</button>
-</div>
 <a href="https://wa.me/917488108079"
-   style="position:fixed;bottom:20px;right:20px;
-   background:#25D366;color:white;
-   padding:15px 18px;
-   border-radius:50%;
-   text-decoration:none;
-   font-size:28px;
-   box-shadow:0 5px 10px rgba(0,0,0,.3);">
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+">
 💬
 </a>
+
 <script>
-function searchProducts() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let products = document.getElementsByClassName("product");
+function searchProducts(){
+let input=document.getElementById("searchInput").value.toLowerCase();
+let products=document.getElementsByClassName("product");
 
-  for (let i = 0; i < products.length; i++) {
-    let text = products[i].innerText.toLowerCase();
+for(let i=0;i<products.length;i++){
+let name=products[i].innerText.toLowerCase();
 
-    if (text.includes(input)) {
-      products[i].style.display = "block";
-    } else {
-      products[i].style.display = "none";
-    }
-  }
+if(name.indexOf(input)>-1){
+products[i].style.display="block";
+}else{
+products[i].style.display="none";
+}
+}
 }
 </script>
+
+
+</body>
 </html>
