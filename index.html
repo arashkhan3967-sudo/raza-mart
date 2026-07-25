@@ -82,7 +82,20 @@ function addToCart(product){
 
 <p>🕒 Open: 8:00 AM - 11:00 PM</p>
 
-<button>Call Now</button>
+<button><div style="text-align:center; margin:20px 0;">
+
+<a href="tel:+917488108079"
+style="background:#0b8f2d;color:#fff;padding:14px 22px;text-decoration:none;border-radius:30px;display:inline-block;margin:8px;font-size:18px;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+📞 Call Owner 1
+</a>
+
+<a href="tel:+917277435149"
+style="background:#0066ff;color:#fff;padding:14px 22px;text-decoration:none;border-radius:30px;display:inline-block;margin:8px;font-size:18px;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+📞 Call Owner 2
+</a>
+
+</div>
+</button>
 
 </div>
 
@@ -94,7 +107,19 @@ function addToCart(product){
 <h2>🔥 Today's Special Offer 🔥</h2>
 <h3>Up to 50% OFF</h3>
 
-<button>🛒 Shop Now</button>
+<button><a href="https://wa.me/917488108079?text=Hello%20RAZA%20MART,%20I%20want%20to%20order."
+style="background:linear-gradient(45deg,#28a745,#0d6efd);
+color:white;
+padding:14px 28px;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+display:inline-block;
+box-shadow:0 5px 12px rgba(0,0,0,0.3);
+transition:0.3s;">
+🛒 Shop Now
+</a> </button></button>
 
 <hr>
 
@@ -108,7 +133,39 @@ function addToCart(product){
 
 <hr>
 
-<h2>📞 Contact Us</h2>
+<h2><section style="background:#ffffff;padding:25px;border-radius:20px;margin:20px;box-shadow:0 8px 20px rgba(0,0,0,.15);text-align:center;">
+
+<h2 style="color:#0a8f3d;">📞 Contact Us</h2>
+
+<a href="https://wa.me/917488108079"
+style="display:block;background:linear-gradient(45deg,#25D366,#128C7E);color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
+💬 WhatsApp 1
+</a>
+
+<a href="https://wa.me/917277435149"
+style="display:block;background:linear-gradient(45deg,#25D366,#128C7E);color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
+💬 WhatsApp 2
+</a>
+
+<a href="https://wa.me/917488108079?text=Hello%20RAZA%20MART%2C%20I%20need%20help."
+style="display:block;background:linear-gradient(45deg,#ff9800,#ff5722);color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
+🛒 Order / Support
+</a>
+
+<a href="tel:+917488108079"
+style="display:block;background:#0a8f3d;color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
+📞 Call 7488108079
+</a>
+
+<a href="tel:+917277435149"
+style="display:block;background:#0066ff;color:white;text-decoration:none;padding:15px;border-radius:50px;margin:12px;font-size:18px;font-weight:bold;">
+📞 Call 7277435149
+</a>
+
+<p style="font-size:18px;">📍 Aurangabad, Bihar</p>
+<p style="font-size:18px;">🕒 Open: 8:00 AM – 11:00 PM</p>
+
+</section> </h2>
 
 <a href="https://wa.me/917488108079">
     <button>💬 WhatsApp 1</button>
@@ -138,10 +195,11 @@ function addToCart(product){
 <h2 style="text-align:center;">📍 Our Location</h2>
 
 <iframe
-src="https://www.google.com/maps?q=Aurangabad,Bihar&output=embed"
+src="https://www.google.com/maps?q=Raza+Mart+Nawadih+Aurangabad+Bihar&output=embed"
 width="100%"
 height="300"
-style="border:0;border-radius:10px;"
+style="border:0;border-radius:15px;"
+allowfullscreen=""
 loading="lazy">
 </iframe>
 
@@ -150,34 +208,165 @@ loading="lazy">
 <hr>
 
 <h2>🛍️ Our Products</h2>
+<style>
+.product{
+  background:#fff;
+  border-radius:18px;
+  padding:18px;
+  margin:18px 0;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  text-align:center;
+  transition:.3s;
+}
 
-<div>
-  <h3>🌾 Aashirvaad Atta</h3>
-  <p>₹440 / 10kg</p>
-  <button>Buy Now</button>
+.product:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+.product h3{
+  color:#0a8f3d;
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.product p{
+  color:#ff5722;
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.buy-btn{
+  display:inline-block;
+  background:linear-gradient(45deg,#25D366,#128C7E);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 28px;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.buy-btn:hover{
+  background:linear-gradient(45deg,#128C7E,#25D366);
+}
+</style>
+
+<div class="product">
+<h3>🌾 Aashirvaad Atta</h3>
+<p>₹440 / 10kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Aashirvaad%20Atta">🛒 Buy Now</a>
 </div>
 
-<hr>
-
-<div>
-  <h3>🍚 Basmati Rice</h3>
-  <p>₹178 / 1kg</p>
-  <button>Buy Now</button>
+<div class="product">
+<h3>🛢️ Fortune Oil 1L</h3>
+<p>₹170</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Fortune%20Oil%201L">🛒 Buy Now</a>
 </div>
 
-<hr>
-
-<div>
-  <h3>🥛 Amul Milk</h3>
-  <p>₹35 / 500ml</p>
-  <button>Buy Now</button>
+<div class="product">
+<h3>🧂 Tata Salt</h3>
+<p>₹30</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Tata%20Salt">🛒 Buy Now</a>
 </div>
 
-<hr>
+<div class="product">
+<h3>🍬 Sugar</h3>
+<p>₹50 / kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Sugar">🛒 Buy Now</a>
+</div>
 
-<div>
-  <h3>🥤 Coca-Cola</h3>
-  <p>₹40</p>
+<div class="product">
+<h3>🍜 Maggi</h3>
+<p>₹15</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Maggi">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🍪 Parle-G</h3>
+<p>₹10</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Parle-G">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🥛 Amul Milk</h3>
+<p>₹60</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Amul%20Milk">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🥤 Coca-Cola</h3>
+<p>₹70</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Coca-Cola">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🍚 Chini</h3>
+<p>₹50 / kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Chini">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🌼 Arhar Dal</h3>
+<p>₹135 / kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Arhar%20Dal">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🌼 Masoor Dal</h3>
+<p>₹89 / kg</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Masoor%20Dal">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🧽 Vim Soap</h3>
+<p>₹4</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Vim%20Soap">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🧺 Wheel Surf</h3>
+<p>₹78</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Wheel%20Surf">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🧺 Surf Excel 7kg</h3>
+<p>₹700</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Surf%20Excel%207kg">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🧺 Surf Excel 1kg</h3>
+<p>₹130</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Surf%20Excel%201kg">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🥜 Kaju 250gm</h3>
+<p>₹260</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Kaju%20250gm">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🧈 Cow Ghee 500mL</h3>
+<p>₹700</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Cow%20Ghee%20500mL">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🍫 Oreo Family Pack (Buy 1 Get 1 Free)</h3>
+<p>₹144</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Oreo%20Family%20Pack">🛒 Buy Now</a>
+</div>
+
+<div class="product">
+<h3>🧴 Harpic 1L</h3>
+<p>₹200</p>
+<a class="buy-btn" href="https://wa.me/917488108079?text=I%20want%20to%20order%20Harpic%201L">🛒 Buy Now</a>
+</div>
   <button>Buy Now</button>
 </div>
 <a href="https://wa.me/917488108079"
@@ -190,5 +379,20 @@ loading="lazy">
    box-shadow:0 5px 10px rgba(0,0,0,.3);">
 💬
 </a>
+<script>
+function searchProducts() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.getElementsByClassName("product");
 
+  for (let i = 0; i < products.length; i++) {
+    let text = products[i].innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      products[i].style.display = "block";
+    } else {
+      products[i].style.display = "none";
+    }
+  }
+}
+</script>
 </html>
